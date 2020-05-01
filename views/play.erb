@@ -1,19 +1,10 @@
 <% if @game.player_2.hit_points == 0 %>
-
   <h1> <%= @game.player_2.name %> loses</h1>
-
 <% else%>
-
   <h1><%= @game.current_player.name %>'s turn</h1>
-
   <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
-
   </br>
-
   <%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP
-
   <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
-
   <a href="/attack">Attack</a>
-
 <% end %>
