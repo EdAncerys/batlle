@@ -38,4 +38,13 @@ feature 'Attacking' do
     expect(page).to have_content 'Dave attacked Mittens'
   end
 
+  scenario 'players 2 attack reduce my HP' do
+    sign_in_and_play
+    click_link 'Attack'
+    click_link 'OK'
+    click_link 'Attack'
+    click_link 'OK'
+    expect(page).to have_content 'Dave: 50HP'
+  end
+
 end
