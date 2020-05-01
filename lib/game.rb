@@ -15,5 +15,13 @@ class Game
   def switch_turn
     @current_player == @player_1 ? @current_player = @player_2 : @current_player =  @player_1
   end
+
+  def self.create(player_1, player_2)
+    @game = Game.new(player_1, player_2)
+  end
+  
+  def self.instance
+    @game
+  end
   
 end
