@@ -17,11 +17,17 @@ feature 'Attacking' do
     expect(page).to have_content 'Mittens: 50HP'
   end
 
+  # extract to dif spec file
   scenario 'switch turns turns' do
     sign_in_and_play
     click_link 'Attack'
     click_link 'OK'
     expect(page).to have_content "Mittens's turn"
+  end
+
+  scenario 'i want to see my hit points' do
+    sign_in_and_play
+    expect(page).to have_content 'Dave: 60HP'
   end
 
 end
