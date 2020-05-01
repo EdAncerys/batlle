@@ -23,5 +23,11 @@ describe Game do
       game.attack(player_1)
     end
   end
+
+  describe '#switch_turn' do
+    it 'should swich players' do
+      expect{ subject.switch_turn }.to change{ subject.current_player }.to eq player_2
+    end
+  end
   
 end
