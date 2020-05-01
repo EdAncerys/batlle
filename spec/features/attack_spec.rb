@@ -35,7 +35,7 @@ feature 'Attacking' do
     click_link 'Attack'
     click_link 'OK'
     click_link 'Attack'
-    expect(page).to have_content 'Dave attacked Mittens'
+    expect(page).to have_content 'Mittens attacked Dave'
   end
 
   scenario 'players 2 attack reduce my HP' do
@@ -45,6 +45,15 @@ feature 'Attacking' do
     click_link 'Attack'
     click_link 'OK'
     expect(page).to have_content 'Dave: 50HP'
+  end
+
+  scenario 'loosing message' do
+    sign_in_and_play
+    11.times do
+      click_link 'Attack'
+      click_link 'OK'
+    end
+    expect(page).to have_content 'Mittens loses'
   end
 
 end
