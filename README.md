@@ -158,3 +158,14 @@ As a Player,
 So I can enjoy my game of Battle,
 I want a sexy user interface
 ```
+
+## Battle Web App UI
+
+### User UI preview
+
+<p align="center">
+    <img width="600" src="images/battle-ui-01.png">
+
+    *User UI view*
+
+</p>
